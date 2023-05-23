@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wsAlpha</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+</head>
+<body>
+<div class="hero">
+    <h1>Welcome to wsAlpha</h1>
+    <p>The <b style="color: #D6500B;">all-in-one</b> solution getting the news that you want</p>
+    <button class="sign-up" onclick="scrollToForm()">Sign Up</button>
+</div>
+<div class="outer-container">
+    {% with messages = get_flashed_messages()%}
+{% if massages%}
+    {% for massage in massages%}
+    <p>{{massage}}</p>
+    {%endfor%}
+    {%endif%}
+    {%endwith%}
+    <div class="form-container" id="formContainer">
+        <form id="myForm" method="post" action="{{ url_for('home') }}">
+          <h2>Join Us</h2>
+          <hr>
+          <br>
+          <div class="form-step">
+              <label for="email">Email</label><br>
+              <input type="email" id="email" name="email" required><br>
+              <button type="button" onclick="nextStep(1)" style = "background-color :rgb(173,251,128); color: rgb(45,46,58);">Next</button>
+          </div>
+          <div class="form-step">
+              <label for="name">Name</label><br>
+              <input type="text" id="name" name="name"><br>
+                <button type="button" onclick="prevStep(0)" required>Back</button>
+              <button type="button" onclick="nextStep(2)">Next</button>
+          </div>
+          <div class="form-step">
+              <label for="keyword_1">First Keyword</label><br>
+              <input type="text" id="keyword_1" name="keyword_1" required><br>
+              <button type="button" onclick="prevStep(1)">Back</button>
+              <button type="button" onclick="nextStep(3)">Next</button>
+          </div>
+          <div class="form-step">
+              <label for="keyword_2">Second Keyword</label><br>
+              <input type="text" id="keyword_2" name="keyword_2" required><br>
+                <button type="button" onclick="prevStep(2)">Back</button>
+              <button type="button" onclick="nextStep(4)">Next</button>
+          </div>
+          <div class="form-step">
+              <label for="keyword_3">Third Keyword</label><br>
+              <input type="text" id="keyword_3" name="keyword_3" required><br>
+              <button type="button" onclick="prevStep(3)">Back</button>
+              <button type="button" onclick="nextStep(5)">Next</button>
+          </div>
+          <div class="form-step">
+              <label for="keyword_4">Fourth Keyword</label><br>
+              <input type="text" id="keyword_4" name="keyword_4" required><br>
+              <button type="button" onclick="prevStep(4)">Back</button>
+              <button type="button" onclick="nextStep(6)">Next</button>
+          </div>
+           <div class="form-step">
+              <label for="keyword_5">Fifth Keyword</label><br>
+              <input type="text" id="keyword_5" name="keyword_5" required><br>
+              <button type="button" onclick="prevStep(5)">Back</button>
+              <input type="submit" value="Submit" href="/joined">
+          </div>
+      </form>
+    </div>
+</div>
+
+<script>
+    let currentStep = 0;
+    showStep(currentStep);
+
+    function showStep(n) {
+        let steps = document.getElementsByClassName("form-step");
+        steps[n].classList.add("active");
+    }
+
+    function nextStep(n) {
+        let steps = document.getElementsByClassName("form-step");
+        if (n == steps.length) {
+            document.getElementById("myForm").submit();
+            return false;
+        }
+        steps[currentStep].classList.remove("active");
+        steps[currentStep].classList.add("previous");
+        currentStep = n;
+
+        let formContainer = document.getElementById("formContainer");
+        formContainer.style.transform = `translateX(-${0}%)`;
+
+        showStep(currentStep);
+    }
+
+    function prevStep(n) {
+      let steps = document.getElementsByClassName("form-step");
+      if (n < 0) {
+          return false;
+      }
+      steps[currentStep].classList.remove("active");
+      steps[currentStep].classList.remove("previous");
+      currentStep = n;
+
+      let formContainer = document.getElementById("formContainer");
+      formContainer.style.transform = `translateX(-${0}%)`;
+
+      showStep(currentStep);
+    }
+    function scrollToForm() {
+    document.querySelector('#formContainer').scrollIntoView({ behavior:'smooth' });
+}
+</script>
+
+</body>
+</html>
