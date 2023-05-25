@@ -71,9 +71,9 @@ for i in users:
         except Exception:
             exec(u[:22]+' = ["No news found today for this keyword, click here to change keyword", ""]')
             try:
-                exec('keyword'+u[2]+'['+str(count)+'][1] = "https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+                exec('keyword'+u[2]+'['+str(count)+'][1] = "http://127.0.0.1:5000/update')
             except:
-                exec('keyword'+u[2]+'.append(["","https://www.youtube.com/watch?v=dQw4w9WgXcQ"])')
+                exec('keyword'+u[2]+'.append(["","http://127.0.0.1:5000/update"])')
 
 
 
@@ -154,7 +154,7 @@ for i in users:
         kw3=i[5],
         # 1
         kw3article1title=kw3article1titlesource[0],
-        kw3article1link=keyword2[0][1],
+        kw3article1link=keyword3[0][1],
         kw3article1source=kw3article1titlesource[1],
         # 2
         kw3article2title=kw3article2titlesource[0],

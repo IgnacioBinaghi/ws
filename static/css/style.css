@@ -9,16 +9,24 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: rgb(173,251,128);
-            background-color: rgb(173,251,128);
+            color: #FFF962;
+            background-color: #FFF962;
 
         }
-        @media only screen and (max-width: 600px) {
+        @media (max-width: 800px) {
             body {
                 background-size: cover;
+                align-items: center;
+                text-align: center;
             }
-}
+        }
 
+        hr{
+            border: solid 1px white;
+            border-radius: 100px;
+            color: white;
+            width: 150%;
+        }
         .outer-container {
             overflow: hidden;
             height: 100vh;
@@ -26,19 +34,20 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        width: 100vw;
+            width: 100vw;
 
 
         }
         .form-container {
-            max-width: 500px;
+            max-width: 500%;
             padding: 20px;
             border-radius: 10px;
+            margin-left: -5%;
         }
         .form-step {
             opacity: 0;
             position: absolute;
-            transform: translateX(100%);
+            transform: translate(100%);
             transition: all .35s ease-in-out;
         }
         .form-step.active {
@@ -64,15 +73,15 @@
             box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
         }
         input[type=submit], button[type=button] {
-            background-color: rgb(173,251,128);
-            color:rgb(45,46,58);
+            background-color: #FFF962;
+            color: rgb(45,46,58);
             padding:12px 20px;
             border:none;
             border-radius:5px;
             cursor:pointer;
         }
         input[type=submit]:hover, button[type=button]:hover{
-          background-color:#red;
+          background-color: #red;
         }
         .hero {
     display: flex;
@@ -87,12 +96,12 @@
         }
 
         .hero button{
-            background-color: rgb(173,251,128);
+            background-color: #FFF962;
             color:rgb(45,46,58);
             transition: .2s;
         }
         .hero button:hover{
-            background-color: rgb(140,190,190);
+            background-color: #D8B028;
             color:rgb(45,46,58);
             transition: .2s;
         }
@@ -103,16 +112,105 @@
         }
         
         .sign-up {
-          background-color:#007aff; 
-          color:white; 
+          color:red; 
           padding:12px 20px; 
           border:none; 
           border-radius:5px; 
           cursor:pointer; 
-          font-size:1.2em; 
+          font-size:1.2em;
           margin-top:2em
         }
-        
-        .sign-up:hover{
-          background-color:#0066cc
+    
+        .title-content{
+            margin-bottom: 10%;
+            text-align: center;
         }
+        .title-content h1{
+            font-size: 500%;
+        }
+        .title-content p{
+            margin-top: -5%;
+            font-size: 200%;
+        }
+        .content2{
+            align-items: center;
+            display: flex;
+            width: 80%;
+            height: 40vh;
+            font-size: 150%;
+        }
+        .right{
+            display:block;
+            width: 40%;
+            margin-right: -20%;
+            float: right;
+        }
+        .left h1{
+            color: white;
+            font-size: 1em;
+        }
+        .right img{
+            max-width: 80%;
+            height: auto;
+            width: auto\9;
+        }
+        .left{
+            margin-left: 10%;
+            height: 40%;
+            display:block;
+            float: left;
+            margin-right: 0%;
+            width: 60%;
+            align-items: center;
+            text-align: center;
+        }
+        .left p{
+            margin-top: -2%;
+        }
+        .left h1{
+            font-size: 200%;
+        }
+        .left p{
+            font-size: 100%;
+        }
+
+
+        .content3{
+            text-align: center;
+            margin-top: 15%;
+            width: 40%;
+        }
+        .content3 h1{
+            color: white;
+            font-size: 300%;
+        }
+
+        .item p{
+            font-size: 115%;
+        }
+        .item{
+            margin-left: 5%;
+            color: rgb(45,46,58);
+            border: solid 2px white;
+            border-radius: 10px;
+            margin-bottom: 10%;
+            background-color: white;
+            width: 90%;
+            transition: .5s;
+        }
+        .item:hover{
+            margin-left: 50px;
+            transition: .5s;
+            border: solid 2px #D8B028;
+            border-radius: 10px;
+            margin-bottom: 10%;
+            background-color: #D8B028;
+            color: white;
+        }
+
+
+
+
+
+
+

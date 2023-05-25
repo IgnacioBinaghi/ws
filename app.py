@@ -43,6 +43,32 @@ def home():
 def joined():
     return render_template('joined.html')
 
+@app.route('/update', methods=['GET', 'POST'])
+def update():
+    if request.method == "POST":
+        email = request.form.get("email")
+        name = request.form.get("name")
+        keyword_1 = request.form.get("keyword_1")
+        keyword_2 = request.form.get("keyword_2")
+        keyword_3 = request.form.get("keyword_3")
+        keyword_4 = request.form.get("keyword_4")
+        keyword_5 = request.form.get("keyword_5")
+
+        user_template = {
+              "_id" : "1",
+              "email": encrypt(email),
+              "name" : name,
+              "keyword1": keyword_1,
+              "keyword2":keyword_2,
+              "keyword3": keyword_3,
+              "keyword4": keyword_4,
+              "keyword5": keyword_5
+        }
+        push_to_db_repeat(user_template)
+        send_dupesubemail("Your Account Has Been Updated", email)
+    return render_template('update_account.html')
+
+
 
 if __name__ == "__main__":
     app.run(debug=False)

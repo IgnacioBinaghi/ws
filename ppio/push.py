@@ -1,7 +1,3 @@
-""" 
-Controls all push functions to the database
-Isaac
-"""
 from pymongo import MongoClient
 from .basic import get_collection
 import certifi

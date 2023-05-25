@@ -56,7 +56,7 @@ def send_email(subject, receiver_email,
         </head>
         <body style="position:absolute;
                         border-radius: 25px;
-                        border: 2px solid #35852c;
+                        border: 2px solid #D8B028;
                         background: #ffffff;
                         padding: 20px;
                         left:50%;
@@ -71,7 +71,7 @@ def send_email(subject, receiver_email,
                                                 min-width: 400px;
                                                 box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);">
                 <thead>
-                    <tr style="background-color: #35852c;
+                    <tr style="background-color: #D8B028;
                                 color: #ffffff;
                                 text-align: left;">
                         <th style="padding: 12px 15px; color: #;"></th>
@@ -109,7 +109,7 @@ def send_email(subject, receiver_email,
             </table>
 
             <section>
-                <h3 style="color: #35852c;">General</h3>
+                <h3 style="color: #D8B028;">General News</h3>
                 <ul style="list-style: none;
                             padding: 0">
                     <li>
@@ -134,7 +134,7 @@ def send_email(subject, receiver_email,
                 </ul> 
             </section>
             <section>
-                <h3 style="color: #35852c;">{kw1} News</h3>
+                <h3 style="color: #D8B028;">{kw1} News</h3>
                 <ul style="list-style: none;
                             padding: 0">
                     <li>
@@ -155,7 +155,7 @@ def send_email(subject, receiver_email,
                 </ul> 
             </section>
             <section>
-                <h3 style="color: #35852c;">{kw2} News</h3>
+                <h3 style="color: #D8B028;">{kw2} News</h3>
                 <ul style="list-style: none;
                             padding: 0">
                     <li>
@@ -176,7 +176,7 @@ def send_email(subject, receiver_email,
                 </ul> 
             </section>
             <section>
-                <h3 style="color: #35852c;">{kw3} News</h3>
+                <h3 style="color: #D8B028;">{kw3} News</h3>
                 <ul style="list-style: none;
                             padding: 0">
                     <li>
@@ -197,7 +197,7 @@ def send_email(subject, receiver_email,
                 </ul> 
             </section>
             <section>
-                <h3 style="color: #35852c;">{kw4} News</h3>
+                <h3 style="color: #D8B028;">{kw4} News</h3>
                 <ul style="list-style: none;
                             padding: 0">
                     <li>
@@ -218,7 +218,7 @@ def send_email(subject, receiver_email,
                 </ul> 
             </section>
             <section>
-                <h3 style="color: #35852c;">{kw5} News</h3>
+                <h3 style="color: #D8B028;">{kw5} News</h3>
                 <ul style="list-style: none;
                             padding: 0">
                     <li>

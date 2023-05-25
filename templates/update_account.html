@@ -1,45 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>wsAlpha</title>
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>wsAlpha</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
 </head>
 <body>
-<div class="hero">
-    <h1><h style="font-size: 50%; transform: scale(1, 10.5);">ws</h><h style="color: white;">Alpha</h></h1>
-    <p>The <b><u>all-in-one</u></b> solution getting the news that you want</p>
-    <button class="sign-up" onclick="scrollToForm()">Sign Up</button>
-</div>
-
-<div class="title-content">
-    <h1 style="text-align: center;">Tailor-made <h style="color: white;">Emails</h></h1>
-    <p>Get the news you really care about</p>
-</div>
-
-
-<div class="content2">
-    <div class="left">
-    <h1>Choose any topics</h1>
-    <p>Use our keyword tool to select any topic you would like on your newsletter</p>
-    </div>
-    <div class="right"> <img src="../static/images/iphone.png"></div>
-</div>
-
-<div class="content3">
-    <h1>How to use our newsletter...</h1>
-    <div class="item">
-        <p>Enter your email</p>
-    </div>
-    <div class="item">
-        <p>Enter keywords that are clear and relevant</p>
-    </div>
-    <div class="item">
-        <p>Click submit and start recieving your personalized news</p>
-    </div>
-</div>
-
-
-
 <div class="outer-container">
     {% with messages = get_flashed_messages()%}
 {% if massages%}
@@ -50,7 +17,7 @@
     {%endwith%}
     <div class="form-container" id="formContainer">
         <form id="myForm" method="post" action="{{ url_for('home') }}">
-          <h2 style="font-size: 200%;">Join Us</h2>
+          <h2 style="font-size: 200%;">Update Account</h2>
           <hr>
           <br>
           <div class="form-step" style="font-size: 150%;">
@@ -97,7 +64,6 @@
       </form>
     </div>
 </div>
-
 <script>
     let currentStep = 0;
     showStep(currentStep);
@@ -141,6 +107,5 @@
     document.querySelector('#formContainer').scrollIntoView({ behavior:'smooth' });
 }
 </script>
-
 </body>
 </html>
